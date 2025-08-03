@@ -1,0 +1,55 @@
+﻿
+
+@model List<string>;
+
+<h2 align="center">List of Complaints</h2>
+
+@if (@TempData["SuccessMessage"] != null)
+{
+    <p align="center" style="color:green;">@TempData["SuccessMessage"]</p>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <p align="center" style="color:red;">@TempData["ErrorMessage"]</p>
+}
+
+<div class="container">
+    <table class="table">
+
+
+        <thead style="background-color:#4169e1;">
+            <tr>
+                <th style="color:white;">Location</th>
+                <th style="color:white;">Category</th>
+                <th style="color:white;">Description</th>
+           
+            </tr>
+        </thead>
+
+        <tbody>
+            @if (Model == null)
+            {
+                <p style="color:red;">There are no records available!</p>
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+                    var element = item.Split('|');
+                    <tr>
+                        <td>@element[0]</td>
+                        <td>@element[1]</td>
+                        <td>@element[2]</td>
+                        
+                       
+                    </tr>
+                }
+
+            }
+
+
+        </tbody>
+
+
+    </table>
+</div>

@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<h2 align="center" style="color:#9DCAEB;">
+    Welcome to South Africa Municility Report and Service delivery platfrom
+    Your view and Opinions matter to us.
+</h2>
+
+@if (@TempData["SuccessMessage"] != null)
+{
+    <p align="center" style="color:green;">@TempData["SuccessMessage"]</p>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <p align="center" style="color:red;">@TempData["ErrorMessage"]</p>
+}
+
+
+  </br>  </br>  
+
+    <div class="container">
+       
+        <div class="card1">
+            <img src="~/css/images/sanitation.jpg" alt="image loading.." class="profile-image" />
+          
+        </br>
+            </br>
+        <p style="text-align:center;">Data</p>
+        </div>
+
+        <div class="card2">
+            <img src="~/css/images/roads.jpg" alt="image loading.." class="profile-image" />
+            </br>
+            </br>
+        <p style="text-align:center;">Data</p>
+        </div>
+
+        <div class="card3">
+            <img src="~/css/images/utilities.jpg" alt="image loading.." class="profile-image" />
+            </br>
+            </br>
+            <p style="text-align:center;">Data</p>
+        </div>
+
+    </div>
+    </br>
+    </br>
+    </br>
+    </br>
+</div>

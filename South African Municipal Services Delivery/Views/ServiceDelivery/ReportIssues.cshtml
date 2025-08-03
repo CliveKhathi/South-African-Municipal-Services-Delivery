@@ -1,0 +1,46 @@
+﻿
+@model South_African_Municipal_Services_Delivery.Models.ViewModels.ReportIssuesViewModel;
+
+<h2 align="center">Report Issues</h2>
+
+<div class="container">
+        <div class="container d-flex justify-content-center">
+            <div class="small-box">
+       <form method="post">
+
+                <div class="mt-3">
+                    <label class="form-label" style="color:white;">Location:</label>
+                    <input type="text" class="form-control" name="Location" placeholder="Location" asp-for="Location" required />
+                </div>
+
+                <div class="mt-3">
+                    <label class="form-label" style="color:white;">Category:</label>
+                    <select name="Category" class="form-control" id="Category" asp-for="Category">
+                        <option value="Sanitation">Sanitation</option>
+                        <option value="Roads">Roads</option>
+                        <option value="Utilities">Utilities</option>
+                    </select>
+                </div>
+
+                <div class="mt-3">
+                    <label class="form-label" style="color:white;">Description:</label>
+                    <textarea class="form-control" name="Description"  asp-for="Description" required></textarea>
+                </div>          
+
+                <div class="mt-3">
+                    <input type="file" class="form-control" name="fileupload" asp-for="File" required />
+                </div>
+
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+       </form>
+           
+</div>
+        </br>
+        </br>
+</div>
+</div>
+
+
